@@ -1,13 +1,11 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "material-tailwind-project",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@material-tailwind/react": "^2.1.10",
-    "framer-motion": "^11.11.11",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
+    "@material-tailwind/react": "2.1.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -15,6 +13,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -29,10 +33,6 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.14"
-  },
-  "overrides": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "tailwindcss": "3.4.0"
   }
 }
