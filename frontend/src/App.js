@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import { useDropzone } from 'react-dropzone';
+import axios from 'axios';
 
 function App() {
-  const [files, setFiles] = useState({ resumes: [], jobDocs: [] });
+  const [files, setFiles] = useState({ resumes: [] });
   const [error, setError] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [manualJobEntry, setManualJobEntry] = useState("");
@@ -36,6 +37,17 @@ function App() {
     accept: ".pdf,.doc,.txt",
     multiple: true,
   });
+
+  useEffect(() => {
+    if (currentStep === 3) {
+      axios.post('http://localhost:3000/upload/', {
+        resumes: files.resumes,
+        manualJobEntry,
+      }).then((response) => {
+        console.log(response.data);
+      })
+    }
+  })
 
   // Переход к следующему шагу
   const nextStep = () => {
