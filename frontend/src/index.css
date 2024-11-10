@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@media (max-width: 640px) {
 
 * { 
   margin: 0; 
@@ -10,4 +11,87 @@
 } 
 body {
   margin: 0;
+}
+/* Добавьте эти стили в ваш файл index.css */
+  .min-h-screen {
+    min-height: auto;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .max-w-xl {
+    max-width: 100%;
+  }
+
+  .space-y-6 {
+    padding-top: 4px;
+  }
+
+  .mb-6 {
+    margin-bottom: 1rem; /* Уменьшаем отступ для шагов на мобильных */
+  }
+
+  .text-sm {
+    font-size: 0.875rem;  /* Меньший размер шрифта на мобильных */
+  }
+
+  .text-3xl {
+    font-size: 1.875rem;  /* Меньший размер шрифта для заголовков */
+  }
+
+  .text-indigo-600 {
+    color: #4f46e5;
+  }
+
+  .h-12 {
+    height: 3rem;
+  }
+
+  .rounded-full {
+    border-radius: 9999px;
+  }
+
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .text-indigo-600:hover {
+    background-color: #4f46e5;
+  }
+}
+/* index.css */
+
+/* Применяем шрифт Overpass с уникальными классами для разных стилей */
+
+.overpass-header {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* жирный */
+  font-style: normal;
+}
+
+.overpass-body {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* нормальный */
+  font-style: normal;
+}
+
+.overpass-light {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* легкий */
+  font-style: normal;
 }
